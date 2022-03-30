@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #AEB8C4;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+.Header {
+  flex: 1;
+  /* background-color: red; */
+  /* height: 10vh; */
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: red;
+
+}
+
+.NavBar {
+  /* flex: 1; */
+  /* background-color: #a895ad; */
+  height: 90%;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: calc(15px + 3vmin);
+  border-radius: 0px;
+  border: solid #214358;
+  border-width: 0px 0px 2px 0px;
+}
+
+.NavButton {
+  /* flex: 1; */
+  /* background-color: green; */
+  height: 70%;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 1.7vmin);
+  color: #07133040;
+  cursor:pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Opera and Firefox */
+  
+}
+
+.NavButton:hover {
+  color: rgb(161, 161, 161);
+}
+
+
+
+
+
+
+
