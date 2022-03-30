@@ -1,6 +1,7 @@
 const express = require('express');
 const mysql = require('mysql');
 
+// Initialize express server
 const app = express();
 app.use(express.json());
 
@@ -23,7 +24,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-
+// Connect server with database
 const con = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -36,6 +37,7 @@ con.connect((err) => {
   console.log('Connected to MySQL!');
 });
 
+// Show all available services
 app.get('/showservices', (req,res) => {
   try{
     const getServicesQuery = "SELECT * FROM service";
@@ -50,7 +52,7 @@ app.get('/showservices', (req,res) => {
   }
 })
 
-
+// Returns a json file with visits for a specific service
 app.get('/showservicevisits', (req,res) => {
   try{
     let servicePartOfQuery = "";
@@ -98,6 +100,7 @@ app.get('/showservicevisits', (req,res) => {
   }
 })
 
+// Returns the sales for a specific service
 app.get('/showsalesperservice', (req,res) => {
   try{
     const getSalesPerService = "SELECT * FROM sales";
@@ -113,6 +116,7 @@ app.get('/showsalesperservice', (req,res) => {
   }
 })
 
+// Returns all details related to users
 app.get('/showcustomerdetails', (req,res) => {
   try{
     const getSalesPerService = "SELECT * FROM customer_details";
@@ -128,6 +132,7 @@ app.get('/showcustomerdetails', (req,res) => {
   }
 })
 
+// Returns a json object describing in detail all the places visited by the infected person
 app.get('/showplacesfrominfectedperson', (req,res) => {
   try{
     
@@ -149,6 +154,7 @@ app.get('/showplacesfrominfectedperson', (req,res) => {
   }
 })
 
+// Returns a json object describing in detail all the persons that being infected 
 app.get('/showpersonsfrominfectedperson', (req,res) => {
   try{
     
@@ -283,7 +289,7 @@ app.get('/showserviceswithmostusers', (req,res) => {
 
 
 
-
+// Define the port that server is gonna listen
 app.listen(3001, () => {
   console.log('Server is up on port ' + 3001)
 })
