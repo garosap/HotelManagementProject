@@ -21,7 +21,7 @@ The goals of the course was to get familiar with database design and implementat
 Based on the specifications provided by the professor, we designed the following ER diagram:
 
 
-![ER Diagram](/ER.pdf "ER Diagram")
+![ER Diagram](/ER.png "ER Diagram")
 
 ---
 **Technologies**
